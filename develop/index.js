@@ -1,5 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+exports.printMsg = function() {
+    console.log("This is a message from the demo package");
+  }
 
 
 inquirer
@@ -12,7 +15,7 @@ inquirer
         {
             type: "input",
             message: "What is your Github user name?",
-            name: "username",
+            name: "github_username",
         },
         {
             type: "input",
@@ -30,11 +33,25 @@ inquirer
             name: "usage",
         },
         {
+            type: "input",
+            message: "List your collaborators, third-party assets, and any tutorials used.",
+            name: "collaborators",
+        },
+        {
+            type: "input",
+            message: "List your licenses.",
+            name: "licenses",
+        },
 
+    ])
+    .then(function (response) {
+        if (response.confrim === response.description) {
+            console.log("success");
+        } else {
+            console.log("no");
         }
 
-
-    ]);
+    });
 
 
 
