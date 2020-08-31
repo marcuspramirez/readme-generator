@@ -1,10 +1,9 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-exports.printMsg = function() {
-    console.log("This is a message from the demo package");
-  }
+const markdown = require('./utils/markdown');
 
 
+// Questions for users
 inquirer
     .prompt([
         {
@@ -44,17 +43,29 @@ inquirer
         },
 
     ])
-    .then(function (response) {
-        if (response.confrim === response.description) {
-            console.log("success");
-        } else {
-            console.log("no");
-        }
+ 
+    // Function to write file
+    function writeToFile(fileName, data) {
+        fs.writeFile(fileName, data, (err) => {
+            if(err) {
+                throw err;
+            }
+            console.log('success')
+        });
+    }
 
-    });
+    // Function to initialize program
+    function init() {
+        inquirer.prompt(questions).then((answers) => {
 
+            const response = markdown(answers);
+            console.log(answers);
 
+            writeToFile('README.md', response);
+        })
+    }
 
+   
 
 
 
