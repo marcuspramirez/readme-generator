@@ -1,7 +1,5 @@
 # goodReadme-Generator
 
-![](assts/readmescrrenshot.PNG)
-
 
 Deployed Link: https://marcuspramirez.github.io/readme-generator/
 
@@ -22,4 +20,4 @@ node index.js
 ## Usage
 To create a readme
 
-![](assts/readmescrrenshot.PNG)
+![](assets/readmescrrenshot.PNG)
