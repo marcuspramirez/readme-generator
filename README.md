@@ -18,3 +18,5 @@ node index.js
 
 ## Usage
 To create a readme
+
+![](assts/readmescrrenshot.PNG)
