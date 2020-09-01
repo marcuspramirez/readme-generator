@@ -4,8 +4,7 @@ const markdown = require('./utils/markdown');
 
 
 // Questions for users
-inquirer
-    .prompt([
+const questions = [
         {
             type: "input",
             message: "What is the title of your project?",
@@ -37,12 +36,13 @@ inquirer
             name: "collaborators",
         },
         {
-            type: "input",
-            message: "List your licenses.",
+            type: "list",
+            message: "Choose your license.",
             name: "licenses",
+            choices:['MIT', 'GPL v3', 'AGPL', 'None']
         },
 
-    ])
+    ];
  
     // Function to write file
     function writeToFile(fileName, data) {
@@ -64,6 +64,8 @@ inquirer
             writeToFile('README.md', response);
         })
     }
+
+    init();
 
    
 
