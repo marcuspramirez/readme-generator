@@ -1,4 +1,4 @@
-# goodReadme-Generator
+# Readme Generator
 
 
 Deployed Link: https://marcuspramirez.github.io/readme-generator/
@@ -8,16 +8,16 @@ Deployed Link: https://marcuspramirez.github.io/readme-generator/
 * [Decription](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Collabarators](#collabarators)
-* [License](#licenses)
+
 
 ## Description
-This project helps users create a good readme 
+This app was created to help users create a good readme file for their projects. It is was built with Nodejs and is utalized in the command line.  
 
 ## Installation
-node index.js
+Type node index.js in the command line to start
 
-## Usage
-To create a readme
+## Using the application
+After starting the app by typing node index.js the app will start by prompting the user with questions about their project.  Those questions include: What is the title?  What is your githun user name? etc.  If the question does not apply, simply leave the text blank and push enter.  After all questions are answered, a readme file will populate in the file section on the left hand side. 
+
 
 ![](assets/readmescrrenshot.PNG)
